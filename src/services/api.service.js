@@ -9,6 +9,7 @@ const commonConfig = {
 
 export default (baseURL) => {
     return axios.create({
-        ...commonConfig,
+      baseURL: "http://localhost:3001" + baseURL,
+      ...commonConfig,
     });
 };
